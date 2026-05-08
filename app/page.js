@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "./components/site-header";
 import {
   CountUpNumber,
   InViewFade,
@@ -317,78 +318,7 @@ function FacilityTile({ title, image, className, objectPosition }) {
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f4f8ff] text-[#0c3f86]">
-      <header>
-        <div className="bg-[#0b4ca0] text-white">
-          <div className="mx-auto flex h-10 max-w-[1280px] items-center justify-between gap-3 px-4 text-[11px] font-medium sm:h-11 sm:text-[13px]">
-            <div className="hidden items-center gap-2 text-white/92 md:flex">
-              <LocationIcon />
-              <span>Shekhar Central, Palasia Square, Indore</span>
-            </div>
-
-            <div className="flex items-center gap-2 text-white/92">
-              <ClockIcon />
-              <span>Mon-Sat · 10:00 AM - 7:00 PM</span>
-            </div>
-
-            <div className="flex items-center gap-2 sm:gap-5">
-              <div className="hidden items-center gap-2 text-white/92 lg:flex">
-                <MailIcon />
-                <span>info@shantieyetech.com</span>
-              </div>
-              <div className="flex items-center gap-2 text-[#4bf4b8]">
-                <PhoneIcon />
-                <span className="font-semibold">9179191939 / 0731-4291939</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="border-b border-[#dbe7f9] bg-white">
-          <div className="mx-auto flex min-h-20 max-w-[1280px] items-center gap-4 px-4 py-3 lg:min-h-24">
-            <Link href="#" className="flex shrink-0 items-center">
-              <Image
-                src="/favicon.png"
-                alt="Shanti EyeTech Logo"
-                width={200}
-                height={80}
-                className="h-auto w-auto max-w-[150px] sm:max-w-[180px] lg:max-w-[200px]"
-                priority
-              />
-            </Link>
-
-            <nav className="hidden flex-1 items-center justify-center gap-1.5 xl:flex xl:flex-nowrap">
-              {navItems.map((item) => {
-                const active = item === "Home";
-
-                return (
-                  <Link
-                    key={item}
-                    href="#"
-                    className={[
-                      "shrink-0 whitespace-nowrap rounded-full px-3.5 py-2 text-[15px] font-semibold leading-none transition-colors",
-                      active
-                        ? "bg-[#eaf2ff] text-[#2b6ec8]"
-                        : "text-[#46658f] hover:text-[#1f5cb7]",
-                    ].join(" ")}
-                  >
-                    {item}
-                  </Link>
-                );
-              })}
-            </nav>
-
-            <div className="ml-auto flex items-center">
-              <a
-                href="tel:+919179191939"
-                className="inline-flex h-12 items-center gap-2 rounded-full border border-[#2d6ec7] bg-white px-6 text-[16px] font-semibold text-[#2b6ec8] transition hover:bg-[#ecf3ff]"
-              >
-                <PhoneIcon />
-                <span>Call Us</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="relative isolate overflow-hidden">
