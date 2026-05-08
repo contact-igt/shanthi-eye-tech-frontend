@@ -1,0 +1,675 @@
+
+> tmp-app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.0.0.2:3000
+✓ Ready in 321ms
+
+Error: Can't resolve 'tailwindcss' in '/Users/jashu/Desktop'
+    [2m[at finishWithoutResolve (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:942:18)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1034:14][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/Users/jashu/Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /Users/jashu/Desktop or above\n' +
+    '  resolve as module\n' +
+    "    /Users/jashu/Desktop/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/jashu/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+○ Compiling / ...
+Error: Can't resolve 'tailwindcss' in '/Users/jashu/Desktop'
+    [2m[at finishWithoutResolve (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:942:18)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1034:14][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/Users/jashu/Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /Users/jashu/Desktop or above\n' +
+    '  resolve as module\n' +
+    "    /Users/jashu/Desktop/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/jashu/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/Users/jashu/Desktop'
+    [2m[at finishWithoutResolve (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:942:18)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1034:14][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/Users/jashu/Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /Users/jashu/Desktop or above\n' +
+    '  resolve as module\n' +
+    "    /Users/jashu/Desktop/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/jashu/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/Users/jashu/Desktop'
+    [2m[at finishWithoutResolve (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:942:18)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1034:14][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/Users/jashu/Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /Users/jashu/Desktop or above\n' +
+    '  resolve as module\n' +
+    "    /Users/jashu/Desktop/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/jashu/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+Error: Can't resolve 'tailwindcss' in '/Users/jashu/Desktop'
+    [2m[at finishWithoutResolve (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:942:18)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1034:14][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/Users/jashu/Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /Users/jashu/Desktop or above\n' +
+    '  resolve as module\n' +
+    "    /Users/jashu/Desktop/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/jashu/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+node(5666) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5669) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5670) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5695) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5696) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5697) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5698) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5699) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5700) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5701) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5702) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5703) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5704) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5705) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5715) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5716) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5717) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5718) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5719) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5720) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5721) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5722) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5723) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5724) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5725) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5726) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5727) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5728) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Error: Can't resolve 'tailwindcss' in '/Users/jashu/Desktop'
+    [2m[at finishWithoutResolve (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:942:18)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1034:14][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/Users/jashu/Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /Users/jashu/Desktop or above\n' +
+    '  resolve as module\n' +
+    "    /Users/jashu/Desktop/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/jashu/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+node(5729) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5730) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5731) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5732) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5733) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5734) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5735) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5736) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5737) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5738) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5740) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5741) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5742) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5744) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5745) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5746) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5747) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5748) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5749) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5750) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5751) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5752) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5753) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5754) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5755) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5756) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5757) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5758) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5759) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5760) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5761) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5762) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5763) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5765) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5766) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5767) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5768) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5769) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5770) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5771) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5772) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5773) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5774) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5775) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5776) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5777) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5778) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5779) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5780) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5781) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5782) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5783) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5784) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5785) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5786) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5787) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5788) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5789) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5790) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5791) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5792) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5793) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5794) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5795) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5796) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5797) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5798) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5799) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5800) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5801) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5802) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5803) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5804) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5805) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5806) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5807) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5808) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Error: Can't resolve 'tailwindcss' in '/Users/jashu/Desktop'
+    [2m[at finishWithoutResolve (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:942:18)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1034:14][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/Users/jashu/Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /Users/jashu/Desktop or above\n' +
+    '  resolve as module\n' +
+    "    /Users/jashu/Desktop/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/jashu/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+node(5809) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5810) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5811) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5812) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5813) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5814) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5815) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5816) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5817) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5818) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5819) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5820) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5821) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5822) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5823) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5824) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5825) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5826) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5827) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5828) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5829) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5830) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5831) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5832) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5833) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5834) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5835) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5836) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5837) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5839) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5840) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5841) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5842) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5843) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5844) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5845) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5846) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5847) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5848) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5849) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5850) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5851) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5852) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5853) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5854) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5855) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5856) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5857) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5858) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5859) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5860) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5861) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5862) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5863) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5864) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5865) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5866) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5867) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5868) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5869) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5870) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5871) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5872) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5873) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5874) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5875) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5876) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5877) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5878) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5879) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5880) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5881) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5882) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5883) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5884) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5885) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5886) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5887) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5888) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5889) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5890) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5891) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5892) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5893) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5894) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5895) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5896) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5898) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5899) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5900) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5902) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5903) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5904) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5905) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5906) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5907) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5908) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5909) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5910) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5911) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5912) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5913) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5915) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5916) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5917) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5918) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5919) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5920) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5921) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5922) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5923) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5924) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5925) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5926) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5927) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5928) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5929) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5930) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5931) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5932) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5933) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5934) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5935) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5936) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5937) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5938) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5939) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5940) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5941) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5942) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5943) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5944) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5945) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5946) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5947) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5948) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5949) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5950) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5951) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5952) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5953) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5954) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5955) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5956) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5957) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5958) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5959) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5960) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Error: Can't resolve 'tailwindcss' in '/Users/jashu/Desktop'
+    [2m[at finishWithoutResolve (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:942:18)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1034:14][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/Users/jashu/Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /Users/jashu/Desktop or above\n' +
+    '  resolve as module\n' +
+    "    /Users/jashu/Desktop/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/jashu/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+node(5961) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5962) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5963) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5964) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5965) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5966) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5967) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5968) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5969) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5970) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5971) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5972) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5973) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5974) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5975) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5976) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5977) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5978) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5979) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5980) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5981) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5982) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5983) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5984) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5985) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5986) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5987) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5988) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5989) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5990) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5991) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5992) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5993) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5994) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5995) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5996) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5998) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(5999) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6000) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6001) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6002) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6003) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6004) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6005) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6006) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6008) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6009) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6010) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6011) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6012) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6013) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6014) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6015) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6016) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6017) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6018) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6019) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6020) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6021) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6022) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6023) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6024) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6025) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6026) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6027) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6028) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6029) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6031) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6032) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6033) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6034) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6035) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6036) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6037) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6038) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6040) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6041) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6042) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6043) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6044) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6045) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6054) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6057) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6058) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6061) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6063) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6064) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6065) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6073) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6072) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6071) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6074) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6077) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6078) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6079) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6080) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6081) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6082) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6084) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6085) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6086) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6087) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6088) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6089) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6090) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6091) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6092) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6093) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6094) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6095) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6096) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6097) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6098) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6099) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6100) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6101) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6102) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6103) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6104) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6105) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6106) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6107) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6108) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+Error: Can't resolve 'tailwindcss' in '/Users/jashu/Desktop'
+    [2m[at finishWithoutResolve (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:942:18)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1034:14][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:16:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m
+    [2m[at /Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/enhanced-resolve/lib/Resolver.js:1111:5][0m
+    [2m[at eval (eval at create (/Users/jashu/Desktop/Santhi Eye Tech copy/node_modules/tapable/lib/HookCodeFactory.js:31:10), <anonymous>:15:1)][0m {
+  details: "resolve 'tailwindcss' in '/Users/jashu/Desktop'\n" +
+    '  Parsed request is a module\n' +
+    '  No description file found in /Users/jashu/Desktop or above\n' +
+    '  resolve as module\n' +
+    "    /Users/jashu/Desktop/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/jashu/node_modules doesn't exist or is not a directory\n" +
+    "    /Users/node_modules doesn't exist or is not a directory\n" +
+    "    /node_modules doesn't exist or is not a directory"
+}
+node(6109) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+✓ Finished writing to filesystem cache in 2.3min
+node(6110) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6111) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6112) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6113) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6114) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6115) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6116) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6117) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6118) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6119) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6120) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6121) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6122) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6123) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6124) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6125) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6126) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6127) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6128) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6129) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6130) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6131) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6132) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6133) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6134) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6135) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6136) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6137) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6138) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6139) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6140) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6141) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6142) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6143) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6144) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6145) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6146) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6147) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6148) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6149) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6150) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6151) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6152) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6153) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6154) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6155) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6156) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6157) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6158) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6160) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6161) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6162) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6163) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6164) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6186) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6187) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6188) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6189) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6191) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6192) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6193) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6194) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6195) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6196) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6197) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6200) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6201) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6202) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6203) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6204) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6205) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6206) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6207) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6208) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6209) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6210) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6211) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6212) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6213) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6214) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6215) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6216) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6217) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6219) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6221) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6222) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6223) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6224) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6225) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6227) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6229) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6230) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6231) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6232) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6233) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6239) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6240) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6241) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6242) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6243) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6245) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6246) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6247) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6250) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6251) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6255) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+node(6253) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
