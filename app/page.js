@@ -345,19 +345,15 @@ export default function Home() {
 
         <div className="border-b border-[#dbe7f9] bg-white">
           <div className="mx-auto flex min-h-20 max-w-[1280px] items-center gap-4 px-4 py-3 lg:min-h-24">
-            <Link href="#" className="flex shrink-0 items-center gap-3.5">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#2dc7ba] to-[#2f8ccf] text-white lg:h-14 lg:w-14">
-                <EyeMark />
-              </span>
-              <span className="leading-none">
-                <span className="block text-[27px] font-bold tracking-tight text-[#1453ad] sm:text-[30px]">
-                  <span className="text-[#1453ad]">Shanti</span>
-                  <span className="text-[#11499a]">EyeTech</span>
-                </span>
-                <span className="mt-1 block text-[9px] font-semibold uppercase tracking-[0.23em] text-[#7b92b5] sm:text-[10px]">
-                  Eye Care &amp; Laser Hospital
-                </span>
-              </span>
+            <Link href="#" className="flex shrink-0 items-center">
+              <Image
+                src="/favicon.png"
+                alt="Shanti EyeTech Logo"
+                width={200}
+                height={80}
+                className="h-auto w-auto max-w-[150px] sm:max-w-[180px] lg:max-w-[200px]"
+                priority
+              />
             </Link>
 
             <nav className="hidden flex-1 items-center justify-center gap-1.5 xl:flex xl:flex-nowrap">
