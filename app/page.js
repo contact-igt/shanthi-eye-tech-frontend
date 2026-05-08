@@ -88,7 +88,7 @@ const aboutHighlights = [
 const facilityTiles = [
   {
     title: "Reception & waiting lounge",
-    image: "/beds.jpeg",
+    image: "/beds.jpg",
     className: "lg:col-span-6 lg:row-span-2 min-h-[340px] sm:min-h-[420px] lg:min-h-[500px]",
     objectPosition: "object-[center_62%]",
   },
@@ -447,7 +447,7 @@ export default function Home() {
 
                   <Link
                     href="#"
-                    className="motion-link-underline inline-flex items-center gap-2 text-[26px] font-semibold text-[#00388e] transition hover:text-[#002e75]"
+                    className="inline-flex h-14 items-center gap-2.5 rounded-full bg-[#2acb7c] px-6 text-[26px] font-semibold text-white transition-shadow hover:bg-[#1db66d] shadow-md"
                   >
                     <span>Book Appointment</span>
                     <ArrowRightIcon />

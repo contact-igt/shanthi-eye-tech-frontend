@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { InViewFade, StaggerGroup, StaggerItem } from "./animations/motion-system";
 
 const testimonials = [
@@ -176,7 +177,7 @@ export default function TestimonialsFooterSection() {
                   </a>
                   <Link
                     href="#"
-                    className="inline-flex h-11 items-center justify-center rounded-full border border-[#7ec9ba] bg-transparent text-[15px] font-semibold text-[#dcf8f1] transition hover:bg-white/10"
+                    className="inline-flex h-12 items-center justify-center rounded-full bg-[#2acb7c] px-5 text-[16px] font-semibold text-white transition hover:bg-[#1db66d]"
                   >
                     Book Appointment
                   </Link>
@@ -193,17 +194,16 @@ export default function TestimonialsFooterSection() {
             <StaggerItem>
               <div>
                 <div className="flex items-center gap-3">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#2cc8bb] to-[#2f8dcf] text-white">
-                    <FooterEyeIcon />
+                  <span className="flex items-center">
+                    <Image
+                      src="/favicon.png"
+                      alt="Shanti EyeTech logo"
+                      width={260}
+                      height={80}
+                      className="h-auto w-auto object-contain"
+                      priority
+                    />
                   </span>
-                  <div>
-                    <p className="text-[44px] font-semibold leading-none tracking-[-0.02em] text-white sm:text-[48px]">
-                      Shanti EyeTech
-                    </p>
-                    <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#79a7dd]">
-                      Eye Care & Laser Hospital
-                    </p>
-                  </div>
                 </div>
 
                 <p className="mt-4 max-w-[380px] text-[20px] leading-[1.45] text-[#8bb0de]">
