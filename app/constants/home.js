@@ -65,44 +65,46 @@ export const ABOUT_HIGHLIGHTS = [
 
 export const FACILITY_TILES = [
   {
-    title: "Reception & waiting lounge",
-    image: "/bed.webp",
+    title: "Reception Area",
+    image: "/counter.webp",
     className: "lg:col-span-6 lg:row-span-2 min-h-[340px] sm:min-h-[420px] lg:min-h-[500px]",
     objectPosition: "object-[center_62%]",
   },
   {
     title: "Modern OPD wing",
-    image: "/1.jpeg",
+    image: "/LAL02089.jpg",
     className: "lg:col-span-6 min-h-[230px]",
     objectPosition: "object-center",
   },
   {
     title: "Consultation rooms",
-    image: "/2.jpeg",
+    image: "/Clinic_inside.jpg",
     className: "lg:col-span-4 min-h-[230px]",
     objectPosition: "object-[center_35%]",
   },
   {
-    title: "Diagnostic suite",
-    image: "/4.jpeg",
+    title: "Waiting Area ",
+    image: "/Waiting_room.png",
     className: "lg:col-span-2 min-h-[230px]",
     objectPosition: "object-[center_32%]",
   },
   {
-    title: "Pre-op preparation",
-    image: "/3.jpeg",
+    title: "Doctor consultation chambers",
+    image: "/Doctor-consolated-room.png",
     className: "lg:col-span-4 min-h-[210px]",
     objectPosition: "object-center",
   },
+  
+ 
   {
-    title: "Recovery bay",
-    image: "/bed.webp",
+    title: "Main Entrance & Entry Portal",
+    image: "/hospital_photo.jpeg",
     className: "lg:col-span-4 min-h-[210px]",
     objectPosition: "object-[center_62%]",
   },
   {
-    title: "Operation theatre",
-    image: "/5.jpeg",
+    title: "Advance Operation theatre",
+    image: "/setup.jpg",
     className: "lg:col-span-4 min-h-[210px]",
     objectPosition: "object-center",
   },

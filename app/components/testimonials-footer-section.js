@@ -3,6 +3,29 @@ import Image from "next/image";
 import { InViewFade, StaggerGroup, StaggerItem } from "./animations/motion-system";
 import { TESTIMONIALS, QUICK_LINKS, SERVICE_LINKS } from "../constants/testimonials";
 
+function getQuickLinkHref(label) {
+  switch (label) {
+    case "Home":
+      return "/";
+    case "About Us":
+      return "/about";
+    case "Know Your Doctor":
+      return "/know-your-doctor";
+    case "Awards & Achievements":
+      return "/awards";
+    case "Testimonials":
+      return "/testimonials";
+    case "Gallery":
+      return "/gallery";
+    default:
+      return "/";
+  }
+}
+
+function getServiceLinkHref() {
+  return "/services";
+}
+
 function FooterEyeIcon() {
   return (
     <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
@@ -161,13 +184,12 @@ export default function TestimonialsFooterSection({
                   <span>Call 9179 19 1939</span>
                 </a>
 
-                <a
-                  href="#"
-                  className="motion-link-underline inline-flex items-center gap-2 text-[16px] font-semibold text-[#0b4ca0] transition hover:text-[#073c82]"
+                <Link
+                  href="/contact"
+                  className="inline-flex h-12 items-center justify-center whitespace-nowrap rounded-full border border-white/45 bg-white/12 px-7 text-[16px] font-semibold text-white transition hover:bg-white/20"
                 >
-                  <span>Review on Google</span>
-                  <span aria-hidden="true">→</span>
-                </a>
+                  Book Appointment
+                </Link>
               </div>
             </div>
           </div>
@@ -209,7 +231,7 @@ export default function TestimonialsFooterSection({
               <ul className="mt-4 space-y-2.5">
                 {QUICK_LINKS.map((item) => (
                   <li key={item}>
-                    <Link href="#" className="motion-link-underline text-[16px] text-[#9bbce3] transition hover:text-white">
+                    <Link href={getQuickLinkHref(item)} className="motion-link-underline text-[16px] text-[#9bbce3] transition hover:text-white">
                       {item}
                     </Link>
                   </li>
@@ -224,7 +246,7 @@ export default function TestimonialsFooterSection({
               <ul className="mt-4 space-y-2.5">
                 {SERVICE_LINKS.map((item) => (
                   <li key={item}>
-                    <Link href="#" className="motion-link-underline text-[16px] text-[#9bbce3] transition hover:text-white">
+                    <Link href={getServiceLinkHref(item)} className="motion-link-underline text-[16px] text-[#9bbce3] transition hover:text-white">
                       {item}
                     </Link>
                   </li>
