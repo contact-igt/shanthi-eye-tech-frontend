@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteHeader from "../components/site-header";
 import TestimonialsFooterSection from "../components/testimonials-footer-section";
 import { InViewFade, StaggerGroup, StaggerItem, StaggerSlideItem } from "../components/animations/motion-system";
-import { ABOUT_HERO, ABOUT_BODY, ABOUT_TAGS, DIFFERENTIATORS, VISION, MISSION } from "../constants/about";
+import { ABOUT_HERO, ABOUT_BODY, ABOUT_TAGS, DIFFERENTIATORS, DIFFERENCE_IMAGES, VISION, MISSION } from "../constants/about";
 
 function renderIcon(name) {
   if (name === "peace") {
@@ -52,6 +52,40 @@ function renderIcon(name) {
     <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" aria-hidden="true">
       <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.5" />
     </svg>
+  );
+}
+
+function DifferenceImageCard({ title, description, image, objectPosition, className = "" }) {
+  return (
+    <article
+      className={[
+        "group relative min-h-[320px] overflow-hidden rounded-[28px] border border-[#cbdbea] bg-[#dfeaf6] shadow-[0_20px_48px_rgba(53,86,123,0.12)] sm:min-h-[380px]",
+        className,
+      ].join(" ")}
+    >
+      <Image
+        src={image}
+        alt={title}
+        fill
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className={[
+          "object-cover transition-transform duration-700 group-hover:scale-[1.035]",
+          objectPosition,
+        ].join(" ")}
+      />
+      <div
+        className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,51,108,0.02)_15%,rgba(7,51,108,0.72)_100%)]"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
+        <p className="max-w-[420px] text-[24px] font-semibold leading-tight sm:text-[28px]">
+          {title}
+        </p>
+        <p className="mt-2 max-w-[520px] text-[15px] leading-[1.55] text-white/86">
+          {description}
+        </p>
+      </div>
+    </article>
   );
 }
 
@@ -127,35 +161,51 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* --- What makes us different (glass cards with side-entry animation) --- */}
+        {/* --- What makes us different --- */}
         <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
           <div className="mx-auto max-w-[1280px]">
-            <StaggerGroup className="max-w-[980px]" stagger={0.08} distance={20} amount={0.28}>
+            <StaggerGroup className="mx-auto max-w-[1040px] text-center" stagger={0.08} distance={20} amount={0.28}>
               <StaggerItem>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2ca56f]">What makes us different</p>
+                <p className="text-[12px] font-bold uppercase tracking-[0.28em] text-[#2ca56f]">
+                  What makes us different
+                </p>
               </StaggerItem>
               <StaggerItem>
-                <h2 className="mt-3 text-[40px] font-semibold text-[#0f4698] sm:text-[44px] lg:text-[48px]">
-                  Designed around patient comfort
-                  <br />and clinical excellence.
+                <h2 className="mx-auto mt-4 max-w-[920px] text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-[#0f4698] sm:text-[54px] lg:text-[64px]">
+                  Designed around patient comfort.
+                  <br />
+                  Driven by clinical excellence.
                 </h2>
+              </StaggerItem>
+              <StaggerItem>
+                <p className="mx-auto mt-5 max-w-[760px] text-[17px] leading-[1.7] text-[#6f84a3] sm:text-[18px]">
+                  Every space is planned to feel calm, reassuring and precise, from the first conversation at reception to technology-led clinical care.
+                </p>
               </StaggerItem>
             </StaggerGroup>
 
-            <StaggerGroup className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-5 items-stretch" stagger={0.06} distance={18} amount={0.28}>
+            <StaggerGroup className="mt-10 grid gap-6 lg:grid-cols-2" stagger={0.08} distance={22} amount={0.25}>
+              {DIFFERENCE_IMAGES.map((item, idx) => (
+                <StaggerSlideItem key={item.title} direction={idx === 0 ? "left" : "right"}>
+                  <DifferenceImageCard {...item} />
+                </StaggerSlideItem>
+              ))}
+            </StaggerGroup>
+
+            <StaggerGroup className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-5 items-stretch" stagger={0.06} distance={18} amount={0.28}>
               {DIFFERENTIATORS.map((item, idx) => (
                 <StaggerSlideItem key={item.id} direction={idx % 2 === 0 ? "left" : "right"}>
-                  <article className="motion-card-soft glass-card p-6 h-full flex flex-col justify-between rounded-2xl">
-                      <div className="relative z-10 flex flex-col items-center text-center">
-                        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#eaf9f1] text-[#2ca56f]">
-                          {renderIcon(item.icon)}
-                        </span>
+                  <article className="motion-card-soft glass-card p-6 h-full min-h-[220px] flex flex-col justify-between rounded-2xl">
+                    <div className="relative z-10 flex flex-col items-center text-center">
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#eaf9f1] text-[#2ca56f]">
+                        {renderIcon(item.icon)}
+                      </span>
 
-                        <div className="mt-4">
-                          <h3 className="text-[16px] font-semibold text-[#0f4698] glass-title">{item.title}</h3>
-                          <p className="mt-2 text-[14px] text-[#6f849f]">{item.description}</p>
-                        </div>
+                      <div className="mt-4">
+                        <h3 className="text-[16px] font-semibold text-[#0f4698] glass-title">{item.title}</h3>
+                        <p className="mt-2 text-[14px] text-[#6f849f]">{item.description}</p>
                       </div>
+                    </div>
                   </article>
                 </StaggerSlideItem>
               ))}
@@ -186,7 +236,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <TestimonialsFooterSection />
+        <TestimonialsFooterSection showTestimonials={false} />
       </main>
     </div>
   );

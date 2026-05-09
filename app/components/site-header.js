@@ -72,10 +72,10 @@ function EyeMark() {
 const NAV_HREFS = {
   Home: "/",
   "About Us": "/about",
-  "Know Your Doctor": "/#doctor",
-  Services: "/#services",
-  Awards: "/#awards",
-  Testimonials: "/#testimonials",
+  "Know Your Doctor": "/know-your-doctor",
+  Services: "/services",
+  Awards: "/awards",
+  Testimonials: "/testimonials",
   Contact: "/contact",
 };
 
@@ -86,6 +86,10 @@ function getHref(item) {
 function getActiveLabel(pathname, hash) {
   if (pathname === "/about") return "About Us";
   if (pathname === "/contact") return "Contact";
+  if (pathname === "/know-your-doctor") return "Know Your Doctor";
+  if (pathname === "/services") return "Services";
+  if (pathname === "/awards") return "Awards";
+  if (pathname === "/testimonials") return "Testimonials";
 
   if (pathname !== "/") {
     return null;
@@ -188,10 +192,16 @@ export default function SiteHeader() {
             })}
           </nav>
 
-          <div className="ml-auto flex items-center">
+          <div className="ml-auto flex shrink-0 items-center gap-3">
+            <Link
+              href="/contact"
+              className="hidden h-12 min-w-[200px] shrink-0 items-center justify-center whitespace-nowrap rounded-full bg-[#2acb7c] px-6 text-[16px] font-semibold leading-none text-white transition hover:bg-[#1db66d] sm:inline-flex"
+            >
+              Book Appointment
+            </Link>
             <a
               href="tel:+919179191939"
-              className="inline-flex h-12 items-center gap-2 rounded-full border border-[#2d6ec7] bg-white px-6 text-[16px] font-semibold text-[#2b6ec8] transition hover:bg-[#ecf3ff]"
+              className="inline-flex h-12 min-w-[154px] shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full border border-[#2d6ec7] bg-white px-6 text-[16px] font-semibold leading-none text-[#2b6ec8] transition hover:bg-[#ecf3ff]"
             >
               <PhoneIcon />
               <span>Call Us</span>

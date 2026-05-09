@@ -10,7 +10,7 @@ import {
 import ServicesSection from "./components/services-section";
 import TestimonialsFooterSection from "./components/testimonials-footer-section";
 import WhyChooseAwardsSection from "./components/why-choose-awards-section";
-import { HERO_STATS, TRUST_BLOCKS, ABOUT_HIGHLIGHTS, FACILITY_TILES, DOCTOR_SPECIALTIES, DOCTOR_STATS } from "./constants/home";
+import { HERO_STATS, TRUST_BLOCKS, ABOUT_HIGHLIGHTS, FACILITY_TILES, DOCTOR_SPECIALTIES, DOCTOR_STATS, CORE_SPECIALISATIONS } from "./constants/home";
 
 function LocationIcon() {
   return (
@@ -109,6 +109,52 @@ function CareIcon() {
   );
 }
 
+function SpecialisationIcon({ icon }) {
+  if (icon === "shield") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+        <path d="M12 3.8 5.4 6.2v5.2c0 4 2.7 6.5 6.6 8 3.9-1.5 6.6-4 6.6-8V6.2L12 3.8Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (icon === "sparkle") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+        <path d="M12 4v6m0 4v6M4 12h6m4 0h6m-5.8-2.2L16 8m-8 8 1.8-1.8m4.4 0L16 16M8 8l1.8 1.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (icon === "burst") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+        <path d="M12 3.8v16.4M3.8 12h16.4M6.2 6.2l11.6 11.6M17.8 6.2 6.2 17.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (icon === "eye") {
+    return <EyeMark />;
+  }
+
+  if (icon === "document") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+        <path d="M7 4.5h8.2L18 7.3v12.2H7V4.5Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="M9.7 15.7h5.2M9.7 12.3h5.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="7.4" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="2.4" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
 function TrustBlockIcon({ icon }) {
   if (icon === "time") {
     return <TimeIcon />;
@@ -191,6 +237,48 @@ const DOCTOR_PROFILE = {
   ],
 };
 
+function CoreSpecialisationsSection() {
+  return (
+    <section className="bg-[#eef3f8] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8 lg:pb-28">
+      <div className="mx-auto w-full max-w-[1280px]">
+        <StaggerGroup className="max-w-[860px]" stagger={0.08} distance={20} amount={0.25}>
+          <StaggerItem>
+            <p className="text-[12px] font-bold uppercase tracking-[0.28em] text-[#2ca56f]">
+              Areas of Expertise
+            </p>
+          </StaggerItem>
+          <StaggerItem>
+            <h2 className="mt-6 text-[44px] font-bold leading-[1.08] tracking-[-0.03em] text-[#0f4698] sm:text-[56px] lg:text-[64px]">
+              Six core specialisations.
+            </h2>
+          </StaggerItem>
+        </StaggerGroup>
+
+        <StaggerGroup className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3" stagger={0.07} distance={18} amount={0.22}>
+          {CORE_SPECIALISATIONS.map((item) => (
+            <StaggerItem key={item.title}>
+              <article className="group flex h-full min-h-[150px] gap-5 rounded-[20px] border border-[#d6e3f2] bg-white/82 p-6 shadow-[0_12px_30px_rgba(43,71,116,0.06)] transition duration-500 hover:-translate-y-1 hover:border-[#bcd2ea] hover:bg-white hover:shadow-[0_20px_42px_rgba(43,71,116,0.12)] sm:p-7">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[14px] bg-[#eaf6ff] text-[#2375d3] transition duration-500 group-hover:bg-[#dff1ff] group-hover:text-[#0f4698]">
+                  <SpecialisationIcon icon={item.icon} />
+                </span>
+
+                <div>
+                  <h3 className="text-[21px] font-bold leading-tight text-[#0f3292] sm:text-[22px]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 max-w-[380px] text-[16px] leading-[1.55] text-[#6f84a3] sm:text-[17px]">
+                    {item.description}
+                  </p>
+                </div>
+              </article>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f4f8ff] text-[#0c3f86]">
@@ -252,7 +340,7 @@ export default function Home() {
                   </a>
 
                   <Link
-                    href="#"
+                    href="/contact"
                     className="inline-flex h-14 items-center gap-2.5 rounded-full bg-[#2acb7c] px-6 text-[26px] font-semibold text-white transition-shadow hover:bg-[#1db66d] shadow-md"
                   >
                     <span>Book Appointment</span>
@@ -512,6 +600,8 @@ export default function Home() {
             </InViewFade>
           </div>
         </section>
+
+        <CoreSpecialisationsSection />
 
         <ServicesSection />
 

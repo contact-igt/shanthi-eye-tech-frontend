@@ -56,98 +56,123 @@ function TestimonialCard({ quote, initials, name, meta }) {
   );
 }
 
-export default function TestimonialsFooterSection() {
+export default function TestimonialsFooterSection({
+  showTestimonials = true,
+  showExperienceCta = true,
+}) {
+  const hasTopPanel = showTestimonials;
+
   return (
     <>
-      <section className="bg-[#eef3f8] px-4 pb-12 pt-16 sm:px-6 sm:pb-14 sm:pt-20 lg:px-8 lg:pb-16 lg:pt-24">
-        <div className="mx-auto w-full max-w-[1280px]">
-          <StaggerGroup className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end" stagger={0.12} distance={24}>
-            <StaggerItem>
-              <div>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#2ca56f]">
-                  Patient Voices
-                </p>
-                <h2 className="mt-2 text-[50px] font-semibold tracking-[-0.03em] text-[#0f4698] sm:text-[58px] lg:text-[64px]">
-                  What our patients say.
-                </h2>
-              </div>
-            </StaggerItem>
+      {hasTopPanel ? (
+        <section
+          className={[
+            "bg-[#eef3f8] px-4 pb-12 sm:px-6 sm:pb-14 lg:px-8 lg:pb-16",
+            showTestimonials ? "pt-16 sm:pt-20 lg:pt-24" : "pt-0",
+          ].join(" ")}
+        >
+          <div className="mx-auto w-full max-w-[1280px]">
+            {showTestimonials ? (
+              <>
+                <StaggerGroup className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end" stagger={0.12} distance={24}>
+                  <StaggerItem>
+                    <div>
+                      <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#2ca56f]">
+                        Patient Voices
+                      </p>
+                      <h2 className="mt-2 text-[50px] font-semibold tracking-[-0.03em] text-[#0f4698] sm:text-[58px] lg:text-[64px]">
+                        What our patients say.
+                      </h2>
+                    </div>
+                  </StaggerItem>
 
-            <StaggerItem>
-              <div className="lg:justify-self-end">
-                <RatingCard />
-              </div>
-            </StaggerItem>
-          </StaggerGroup>
+                  <StaggerItem>
+                    <div className="lg:justify-self-end">
+                      <RatingCard />
+                    </div>
+                  </StaggerItem>
+                </StaggerGroup>
 
-          <StaggerGroup className="mt-6 grid gap-4 lg:grid-cols-3 items-stretch" stagger={0.09} distance={16} amount={0.3}>
-            {TESTIMONIALS.map((item) => (
-              <StaggerItem key={item.name}>
-                <TestimonialCard
-                  quote={item.quote}
-                  initials={item.initials}
-                  name={item.name}
-                  meta={item.meta}
-                />
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
+                <StaggerGroup className="mt-6 grid gap-4 lg:grid-cols-3 items-stretch" stagger={0.09} distance={16} amount={0.3}>
+                  {TESTIMONIALS.map((item) => (
+                    <StaggerItem key={item.name}>
+                      <TestimonialCard
+                        quote={item.quote}
+                        initials={item.initials}
+                        name={item.name}
+                        meta={item.meta}
+                      />
+                    </StaggerItem>
+                  ))}
+                </StaggerGroup>
 
-          <InViewFade className="mt-8 text-center" distance={16}>
-            <Link
-              href="#"
-              className="motion-link-underline inline-flex items-center gap-2 text-[18px] font-semibold text-[#1f5cae] transition hover:text-[#164890]"
-            >
-              <span>Read more reviews on Google</span>
-              <span aria-hidden="true">→</span>
-            </Link>
-          </InViewFade>
-
-          <InViewFade className="motion-gradient-shift mt-14 rounded-[22px] border border-[#1c5fb0] bg-[linear-gradient(104deg,#0f4698_14%,#1a66b6_56%,#0f9d72_100%)] px-6 py-7 shadow-[0_14px_30px_rgba(19,67,129,0.26)] sm:px-8 sm:py-8 lg:mt-16 lg:px-10 lg:py-10" distance={26}>
-            <StaggerGroup className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center" stagger={0.1} distance={18}>
-              <StaggerItem>
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#65f0bd]">
-                    Need Eye Care Today?
-                  </p>
-                  <h3 className="mt-2 text-[45px] font-semibold leading-[1.04] tracking-[-0.03em] text-white sm:text-[54px] lg:text-[58px]">
-                    Book your consultation
-                    <br />
-                    at Shanti EyeTech.
-                  </h3>
-                  <p className="mt-3 max-w-[620px] text-[17px] leading-[1.5] text-[#c8daf2] sm:text-[18px]">
-                    Call directly, message on WhatsApp, or fill our short form - our team
-                    will get back to you within the hour during clinic times.
-                  </p>
-                </div>
-              </StaggerItem>
-
-              <StaggerItem>
-                <div className="flex w-full flex-col gap-3 sm:w-[210px]">
-                  <a
-                    href="tel:+919179191939"
-                    className="inline-flex h-12 items-center justify-center rounded-full bg-[#2acb7c] px-5 text-[16px] font-semibold text-white transition hover:bg-[#1db66d]"
-                  >
-                    Call 9179 19 1939
-                  </a>
-                  <a
-                    href="https://wa.me/919179191939"
-                    className="inline-flex h-11 items-center justify-center rounded-full text-[15px] font-semibold text-[#9fd3ff] transition hover:text-white"
-                  >
-                    WhatsApp Us
-                  </a>
+                <InViewFade className="mt-8 text-center" distance={16}>
                   <Link
-                    href="#"
-                    className="inline-flex h-12 items-center justify-center rounded-full bg-[#2acb7c] px-5 text-[16px] font-semibold text-white transition hover:bg-[#1db66d]"
+                    href="/testimonials#what-our-patients-say"
+                    className="motion-link-underline inline-flex items-center gap-2 text-[18px] font-semibold text-[#1f5cae] transition hover:text-[#164890]"
                   >
-                    Book Appointment
+                    <span>Read more reviews</span>
+                    <span aria-hidden="true">→</span>
                   </Link>
-                </div>
-              </StaggerItem>
-            </StaggerGroup>
-          </InViewFade>
-        </div>
-      </section>
+                </InViewFade>
+              </>
+            ) : null}
+
+          </div>
+        </section>
+      ) : null}
+
+      {showExperienceCta ? (
+        <section
+          className={[
+            "bg-[#eef3f8] px-4 sm:px-6 lg:px-8",
+            hasTopPanel ? "pb-12 sm:pb-14 lg:pb-16" : "py-12 sm:py-14 lg:py-16",
+          ].join(" ")}
+        >
+          <div className="mx-auto w-full max-w-[1280px] overflow-hidden rounded-[30px] border border-[#8ab4eb]/45 bg-[linear-gradient(120deg,#0d4ba4_0%,#1e64bc_58%,#129f66_100%)] shadow-[0_22px_50px_rgba(19,67,129,0.24)]">
+            <div className="grid gap-8 p-8 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center lg:p-12">
+              <div>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#80f2ca]">
+                  Share your experience
+                </p>
+                <h3 className="mt-4 max-w-[620px] text-[52px] font-semibold leading-[1.03] tracking-[-0.03em] text-white sm:text-[58px]">
+                  We&apos;d love to hear
+                  <br />
+                  from you, too.
+                </h3>
+                <p className="mt-4 max-w-[680px] text-[18px] leading-[1.6] text-[#c5d8f4] sm:text-[19px]">
+                  Your review helps other patients find the care they need.
+                </p>
+              </div>
+
+              <div className="flex flex-col items-start gap-4 lg:items-center">
+                <a
+                  href="tel:+919179191939"
+                  className="inline-flex h-14 items-center gap-3 whitespace-nowrap rounded-full bg-[#35c97b] px-8 text-[16px] font-semibold text-white transition hover:bg-[#2bb06a]"
+                >
+                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+                    <path
+                      d="M6.3 4.8c.3-.7 1-.9 1.7-.7l2.4.8c.7.2 1.1.9.9 1.6L10.6 9c-.2.6-.8 1-1.5.9l-1.4-.2a15.3 15.3 0 0 0 6.6 6.6l-.2-1.4c-.1-.7.3-1.3.9-1.5l2.5-.7c.7-.2 1.4.2 1.6.9l.8 2.4c.2.7 0 1.4-.7 1.7l-1.8.8a4.4 4.4 0 0 1-4-.2 19.5 19.5 0 0 1-8.6-8.6 4.4 4.4 0 0 1-.2-4l.7-1.8Z"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span>Call 9179 19 1939</span>
+                </a>
+
+                <a
+                  href="#"
+                  className="motion-link-underline inline-flex items-center gap-2 text-[16px] font-semibold text-[#0b4ca0] transition hover:text-[#073c82]"
+                >
+                  <span>Review on Google</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <footer className="bg-[#0d4798] px-4 pb-7 pt-12 sm:px-6 sm:pb-8 sm:pt-14 lg:px-8 lg:pb-10 lg:pt-16">
         <div className="mx-auto w-full max-w-[1280px]">

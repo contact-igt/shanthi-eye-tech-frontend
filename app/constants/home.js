@@ -138,3 +138,36 @@ export const DOCTOR_STATS = [
     label: "Professional memberships",
   },
 ];
+
+export const CORE_SPECIALISATIONS = [
+  {
+    title: "Cataract Surgery",
+    description: "Advanced phacoemulsification and micro-incision techniques.",
+    icon: "target",
+  },
+  {
+    title: "Glaucoma Management",
+    description: "Diagnosis, medical and surgical management of glaucoma.",
+    icon: "shield",
+  },
+  {
+    title: "LASIK & Refractive",
+    description: "Refractive-LASIK-LASER surgery for vision correction.",
+    icon: "sparkle",
+  },
+  {
+    title: "Advanced Phaco",
+    description: "Premium IOLs and advanced cataract techniques.",
+    icon: "burst",
+  },
+  {
+    title: "Micro Cataract Surgery",
+    description: "Small-incision cataract surgery for faster recovery.",
+    icon: "eye",
+  },
+  {
+    title: "Ophthalmic Research",
+    description: "Active in scientific presentations and academic research.",
+    icon: "document",
+  },
+];

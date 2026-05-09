@@ -48,6 +48,21 @@ export const DIFFERENTIATORS = [
   },
 ];
 
+export const DIFFERENCE_IMAGES = [
+  {
+    title: "Calm reception and optical lounge",
+    description: "A welcoming first step into care, designed to feel open, clean and reassuring.",
+    image: "/Clinic_inside.jpg",
+    objectPosition: "object-[center_55%]",
+  },
+  {
+    title: "Advanced surgical setup",
+    description: "Modern clinical spaces that support precise treatment and patient safety.",
+    image: "/setup.jpg",
+    objectPosition: "object-center",
+  },
+];
+
 export const VISION = {
   title: "Our Vision",
   description:
