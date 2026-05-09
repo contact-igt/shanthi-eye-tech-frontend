@@ -1,48 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { InViewFade, StaggerGroup, StaggerItem } from "./animations/motion-system";
-
-const testimonials = [
-  {
-    quote:
-      "The whole LASIK experience was extremely smooth. Dr. Solanki explained every step and the team made me feel completely at ease.",
-    initials: "PS",
-    name: "Priya S.",
-    meta: "LASIK patient · Indore",
-  },
-  {
-    quote:
-      "My father had his cataract operation here. The transparency in pricing and care, and the calm environment made all the difference.",
-    initials: "RM",
-    name: "Rakesh M.",
-    meta: "Cataract surgery · Indore",
-  },
-  {
-    quote:
-      "Long-term glaucoma care here has been outstanding. The doctor explains everything clearly and the staff is genuinely caring.",
-    initials: "AV",
-    name: "Anita V.",
-    meta: "Glaucoma patient · Indore",
-  },
-];
-
-const quickLinks = [
-  "Home",
-  "About Us",
-  "Know Your Doctor",
-  "Awards & Achievements",
-  "Testimonials",
-  "Gallery",
-];
-
-const serviceLinks = [
-  "Cataract Services",
-  "Glaucoma Care",
-  "Freedom From Glasses",
-  "Keratoconus Care",
-  "Retina Services",
-  "Pediatric Eye Care",
-];
+import { TESTIMONIALS, QUICK_LINKS, SERVICE_LINKS } from "../constants/testimonials";
 
 function FooterEyeIcon() {
   return (
@@ -76,9 +35,11 @@ function RatingCard() {
 
 function TestimonialCard({ quote, initials, name, meta }) {
   return (
-    <article className="rounded-2xl border border-[#d5dfec] bg-white px-5 py-5 shadow-[0_6px_14px_rgba(34,68,112,0.06)]">
-      <p className="text-[14px] tracking-[0.14em] text-[#f3b31c]">★★★★★</p>
-      <p className="mt-2 text-[17px] leading-[1.48] text-[#5f789b]">“{quote}”</p>
+    <article className="glass-card motion-card-soft p-6 h-full flex flex-col justify-between">
+      <div>
+        <p className="text-[14px] tracking-[0.14em] text-[#f3b31c]">★★★★★</p>
+        <p className="mt-2 text-[17px] leading-[1.48] text-[#5f789b]">“{quote}”</p>
+      </div>
 
       <div className="mt-4 border-t border-[#e3eaf3] pt-4">
         <div className="flex items-center gap-3">
@@ -86,7 +47,7 @@ function TestimonialCard({ quote, initials, name, meta }) {
             {initials}
           </span>
           <div>
-            <p className="text-[16px] font-semibold text-[#1f5cae]">{name}</p>
+            <p className="text-[16px] font-semibold glass-title">{name}</p>
             <p className="text-[12px] text-[#8aa0bb]">{meta}</p>
           </div>
         </div>
@@ -119,8 +80,8 @@ export default function TestimonialsFooterSection() {
             </StaggerItem>
           </StaggerGroup>
 
-          <StaggerGroup className="mt-6 grid gap-4 lg:grid-cols-3" stagger={0.09} distance={16} amount={0.3}>
-            {testimonials.map((item) => (
+          <StaggerGroup className="mt-6 grid gap-4 lg:grid-cols-3 items-stretch" stagger={0.09} distance={16} amount={0.3}>
+            {TESTIMONIALS.map((item) => (
               <StaggerItem key={item.name}>
                 <TestimonialCard
                   quote={item.quote}
@@ -221,7 +182,7 @@ export default function TestimonialsFooterSection() {
                 </p>
               </div>
               <ul className="mt-4 space-y-2.5">
-                {quickLinks.map((item) => (
+                {QUICK_LINKS.map((item) => (
                   <li key={item}>
                     <Link href="#" className="motion-link-underline text-[16px] text-[#9bbce3] transition hover:text-white">
                       {item}
@@ -236,7 +197,7 @@ export default function TestimonialsFooterSection() {
                 Services
               </p>
               <ul className="mt-4 space-y-2.5">
-                {serviceLinks.map((item) => (
+                {SERVICE_LINKS.map((item) => (
                   <li key={item}>
                     <Link href="#" className="motion-link-underline text-[16px] text-[#9bbce3] transition hover:text-white">
                       {item}

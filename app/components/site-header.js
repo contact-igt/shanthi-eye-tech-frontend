@@ -1,15 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-
-const navItems = [
-  "Home",
-  "About Us",
-  "Know Your Doctor",
-  "Services",
-  "Awards",
-  "Testimonials",
-  "Contact",
-];
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { NAV_ITEMS } from "../constants/navigation";
 
 function LocationIcon() {
   return (
@@ -73,13 +69,55 @@ function EyeMark() {
   );
 }
 
+const NAV_HREFS = {
+  Home: "/",
+  "About Us": "/about",
+  "Know Your Doctor": "/#doctor",
+  Services: "/#services",
+  Awards: "/#awards",
+  Testimonials: "/#testimonials",
+  Contact: "/contact",
+};
+
 function getHref(item) {
-  if (item === "Home") return "/";
-  if (item === "Contact") return "/contact";
-  return "#";
+  return NAV_HREFS[item] ?? "#";
+}
+
+function getActiveLabel(pathname, hash) {
+  if (pathname === "/about") return "About Us";
+  if (pathname === "/contact") return "Contact";
+
+  if (pathname !== "/") {
+    return null;
+  }
+
+  if (hash === "#doctor") return "Know Your Doctor";
+  if (hash === "#services") return "Services";
+  if (hash === "#awards") return "Awards";
+  if (hash === "#testimonials") return "Testimonials";
+
+  return "Home";
 }
 
 export default function SiteHeader() {
+  const pathname = usePathname();
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    const updateHash = () => setHash(window.location.hash);
+
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    window.addEventListener("popstate", updateHash);
+
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+      window.removeEventListener("popstate", updateHash);
+    };
+  }, [pathname]);
+
+  const activeLabel = getActiveLabel(pathname, hash);
+
   return (
     <header>
       <div className="bg-[#0b4ca0] text-white">
@@ -121,22 +159,30 @@ export default function SiteHeader() {
           </Link>
 
           <nav className="hidden flex-1 items-center justify-center gap-1.5 xl:flex xl:flex-nowrap">
-            {navItems.map((item) => {
-              const active = item === "Home";
+            {NAV_ITEMS.map((item) => {
+              const active = activeLabel === item;
               const href = getHref(item);
 
               return (
                 <Link
                   key={item}
                   href={href}
+                  aria-current={active ? "page" : undefined}
                   className={[
-                    "shrink-0 whitespace-nowrap rounded-full px-3.5 py-2 text-[15px] font-semibold leading-none transition-colors",
+                    "relative shrink-0 overflow-hidden whitespace-nowrap rounded-full px-3.5 py-2 text-[15px] font-semibold leading-none transition-colors duration-300",
                     active
-                      ? "bg-[#eaf2ff] text-[#2b6ec8]"
+                      ? "text-[#2b6ec8]"
                       : "text-[#46658f] hover:text-[#1f5cb7]",
                   ].join(" ")}
                 >
-                  {item}
+                  {active ? (
+                    <motion.span
+                      layoutId="nav-active-pill"
+                      className="absolute inset-0 rounded-full bg-[#eaf2ff] shadow-[0_10px_24px_rgba(43,110,200,0.12)] ring-1 ring-[#d9e6f7]"
+                      transition={{ type: "spring", stiffness: 520, damping: 34 }}
+                    />
+                  ) : null}
+                  <span className="relative z-10">{item}</span>
                 </Link>
               );
             })}

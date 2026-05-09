@@ -10,157 +10,7 @@ import {
 import ServicesSection from "./components/services-section";
 import TestimonialsFooterSection from "./components/testimonials-footer-section";
 import WhyChooseAwardsSection from "./components/why-choose-awards-section";
-
-const navItems = [
-  "Home",
-  "About Us",
-  "Know Your Doctor",
-  "Services",
-  "Awards",
-  "Testimonials",
-  "Contact",
-];
-
-const heroStats = [
-  {
-    value: "20+",
-    end: 20,
-    suffix: "+",
-    decimals: 0,
-    label: "Years of Experience",
-  },
-  {
-    value: "4.9★",
-    end: 4.9,
-    suffix: "★",
-    decimals: 1,
-    label: "776 Google Reviews",
-  },
-  {
-    value: "8",
-    end: 8,
-    suffix: "",
-    decimals: 0,
-    label: "Specialised Services",
-  },
-  {
-    value: "1000s",
-    end: 1000,
-    suffix: "s",
-    decimals: 0,
-    label: "Surgeries Performed",
-  },
-];
-
-const trustBlocks = [
-  {
-    title: "20+ Years Experience",
-    description: "Dedicated to ophthalmology since 2003",
-    icon: "time",
-  },
-  {
-    title: "Advanced Technology",
-    description: "Modern equipment for precise diagnosis",
-    icon: "tech",
-  },
-  {
-    title: "Central Indore Location",
-    description: "Easily accessible from anywhere in the city",
-    icon: "location",
-  },
-  {
-    title: "Patient-First Care",
-    description: "Personalised treatment at affordable rates",
-    icon: "care",
-  },
-];
-
-const aboutHighlights = [
-  {
-    title: "Peaceful Care",
-    description: "Calm spaces designed for patient comfort and reassurance.",
-  },
-  {
-    title: "Modern Technology",
-    description: "Advanced diagnostic and surgical equipment under one roof.",
-  },
-];
-
-const facilityTiles = [
-  {
-    title: "Reception & waiting lounge",
-    image: "/beds.jpg",
-    className: "lg:col-span-6 lg:row-span-2 min-h-[340px] sm:min-h-[420px] lg:min-h-[500px]",
-    objectPosition: "object-[center_62%]",
-  },
-  {
-    title: "Modern OPD wing",
-    image: "/1.jpeg",
-    className: "lg:col-span-6 min-h-[230px]",
-    objectPosition: "object-center",
-  },
-  {
-    title: "Consultation rooms",
-    image: "/2.jpeg",
-    className: "lg:col-span-4 min-h-[230px]",
-    objectPosition: "object-[center_35%]",
-  },
-  {
-    title: "Diagnostic suite",
-    image: "/4.jpeg",
-    className: "lg:col-span-2 min-h-[230px]",
-    objectPosition: "object-[center_32%]",
-  },
-  {
-    title: "Pre-op preparation",
-    image: "/3.jpeg",
-    className: "lg:col-span-4 min-h-[210px]",
-    objectPosition: "object-center",
-  },
-  {
-    title: "Recovery bay",
-    image: "/beds.jpeg",
-    className: "lg:col-span-4 min-h-[210px]",
-    objectPosition: "object-[center_62%]",
-  },
-  {
-    title: "Operation theatre",
-    image: "/5.jpeg",
-    className: "lg:col-span-4 min-h-[210px]",
-    objectPosition: "object-center",
-  },
-];
-
-const doctorSpecialties = [
-  "Cataract Surgery",
-  "Glaucoma Care",
-  "LASIK / Refractive",
-  "Phacoemulsification",
-];
-
-const doctorStats = [
-  {
-    value: "2003",
-    end: 2003,
-    suffix: "",
-    decimals: 0,
-    label: "Practising since",
-  },
-  {
-    value: "9+",
-    end: 9,
-    suffix: "+",
-    decimals: 0,
-    label: "National & international honours",
-  },
-  {
-    value: "11",
-    end: 11,
-    suffix: "",
-    decimals: 0,
-    label: "Professional memberships",
-  },
-];
+import { HERO_STATS, TRUST_BLOCKS, ABOUT_HIGHLIGHTS, FACILITY_TILES, DOCTOR_SPECIALTIES, DOCTOR_STATS } from "./constants/home";
 
 function LocationIcon() {
   return (
@@ -315,16 +165,42 @@ function FacilityTile({ title, image, className, objectPosition }) {
   );
 }
 
+const DOCTOR_PROFILE = {
+  eyebrow: "Medical Director",
+  name: "Dr. Amit N. Solanki",
+  subtitle: "MBBS · DOMS · DNB · FAECS · Cataract, Glaucoma & Refractive-LASIK Surgeon",
+  bio:
+    "Director of Shanti EyeTech, with more than 20 years of ophthalmology experience. Trained at B.J. Medical College, Ahmedabad and Aravind Eye Hospital, Tamil Nadu - with advanced training in phacoemulsification, glaucoma diagnosis & management, and LASIK refractive surgery.",
+  highlights: [
+    {
+      label: "Credentials",
+      value: "MBBS · DOMS · DNB · FAECS",
+    },
+    {
+      label: "Specialization",
+      value: DOCTOR_SPECIALTIES.join(", "),
+    },
+    {
+      label: "Recognition",
+      value: `${DOCTOR_STATS[1].value} ${DOCTOR_STATS[1].label}`,
+    },
+    {
+      label: "Affiliations",
+      value: `${DOCTOR_STATS[2].value} ${DOCTOR_STATS[2].label}`,
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f4f8ff] text-[#0c3f86]">
       <SiteHeader />
 
       <main>
-        <section className="relative isolate overflow-hidden">
+        <section id="home" className="relative isolate overflow-hidden">
           <div
             className="absolute inset-0 bg-cover bg-[center_52%]"
-            style={{ backgroundImage: "url('/Home.jpg')" }}
+            style={{ backgroundImage: "url('/Home.jpeg')" }}
             aria-hidden="true"
           />
           <div className="absolute inset-0 bg-[#0f4c9a]/38" aria-hidden="true" />
@@ -388,7 +264,7 @@ export default function Home() {
 
             <InViewFade className="border-t border-white/20 pb-12 pt-7 sm:pb-14" delay={0.16} distance={20}>
               <StaggerGroup className="grid grid-cols-2 gap-y-6 sm:grid-cols-4 sm:gap-5" stagger={0.1} amount={0.35} distance={16}>
-                {heroStats.map((item) => (
+                {HERO_STATS.map((item) => (
                   <StaggerItem key={item.label}>
                     <div>
                       <CountUpNumber
@@ -409,12 +285,12 @@ export default function Home() {
         </section>
 
         <section className="bg-[#f8fafc] px-4 sm:px-6 lg:px-8">
-          <StaggerGroup className="grid w-full overflow-hidden border border-[#dde5ef] md:grid-cols-2 xl:grid-cols-4" stagger={0.09} amount={0.3} distance={18}>
-            {trustBlocks.map((item, index) => (
+          <StaggerGroup className="grid w-full overflow-hidden border border-[#dde5ef] md:grid-cols-2 xl:grid-cols-4 items-stretch" stagger={0.09} amount={0.3} distance={18}>
+            {TRUST_BLOCKS.map((item, index) => (
               <StaggerItem key={item.title}>
                 <div
                   className={[
-                    "motion-card-soft flex min-h-28 items-center gap-4 bg-[#f6f8fb] px-7 py-5",
+                    "motion-card-soft h-full flex items-center gap-4 bg-[#f6f8fb] px-7 py-6 rounded-2xl",
                     index > 0 ? "border-l border-[#dde5ef]" : "",
                     index > 1 ? "border-t border-[#dde5ef] md:border-t-0" : "",
                   ].join(" ")}
@@ -436,7 +312,7 @@ export default function Home() {
           <div className="mx-auto grid w-full max-w-[1280px] items-center gap-10 lg:grid-cols-[1.02fr_1fr] lg:gap-14">
             <InViewFade className="relative min-h-[380px] overflow-hidden rounded-[26px] border border-[#d3e0ec] bg-white shadow-[0_18px_40px_rgba(53,86,123,0.14)] sm:min-h-[500px] lg:min-h-[680px]" distance={28}>
               <Image
-                src="/beds.jpeg"
+                src="/bed.webp"
                 alt="Hospital bed facility"
                 fill
                 sizes="(max-width: 1024px) 100vw, 52vw"
@@ -479,12 +355,10 @@ export default function Home() {
               </StaggerItem>
 
               <StaggerItem>
-                <StaggerGroup className="mt-8 grid gap-4 sm:grid-cols-2" stagger={0.09} distance={14} amount={0.35}>
-                  {aboutHighlights.map((item) => (
+                <StaggerGroup className="mt-8 grid gap-4 sm:grid-cols-2 items-stretch" stagger={0.09} distance={14} amount={0.35}>
+                  {ABOUT_HIGHLIGHTS.map((item) => (
                     <StaggerItem key={item.title}>
-                      <article
-                        className="motion-card-soft rounded-2xl border border-[#d4deea] bg-white/72 px-5 py-4"
-                      >
+                      <article className="motion-card-soft rounded-2xl border border-[#d4deea] bg-white/72 p-6 h-full flex flex-col justify-between">
                         <h3 className="text-[17px] font-semibold text-[#2f70ba]">{item.title}</h3>
                         <p className="mt-1.5 text-[16px] leading-[1.4] text-[#6d83a2]">
                           {item.description}
@@ -533,7 +407,7 @@ export default function Home() {
             </StaggerGroup>
 
             <StaggerGroup className="grid gap-3 sm:gap-4 lg:grid-cols-12" stagger={0.08} amount={0.2} distance={20}>
-              {facilityTiles.map((tile) => (
+              {FACILITY_TILES.map((tile) => (
                 <StaggerItem key={tile.title} className={tile.className}>
                   <FacilityTile
                     title={tile.title}
@@ -547,108 +421,90 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#eef3f8] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8 lg:pb-28">
+        <section id="doctor" className="bg-[#eef3f8] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8 lg:pb-28">
           <div className="mx-auto w-full max-w-[1280px]">
-            <div className="text-center">
-              <InViewFade distance={18}>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#2ca56f]">
-                  Meet Your Doctor
-                </p>
-              </InViewFade>
-              <InViewFade delay={0.06} distance={24}>
-                <h2 className="mt-3 text-[42px] font-semibold tracking-[-0.025em] text-[#0f4698] sm:text-[52px] lg:text-[58px]">
-                  Led by Dr. Amit N. Solanki
-                </h2>
-              </InViewFade>
-            </div>
+            <InViewFade className="rounded-[34px] border border-[#d7e2f0] bg-[#edf3ff] p-5 shadow-[0_18px_40px_rgba(43,71,116,0.10)] sm:p-7 lg:p-10" distance={28}>
+              <div className="grid gap-10 lg:grid-cols-[380px_minmax(0,1fr)] lg:items-center xl:grid-cols-[400px_minmax(0,1fr)] xl:gap-14">
+                <div className="relative self-start lg:self-center">
+                  <div className="relative mx-auto aspect-[4/5] w-full max-w-[380px] overflow-hidden rounded-[28px] border-4 border-white bg-[#dce7f4] shadow-[0_22px_50px_rgba(43,71,116,0.18)]">
+                    <Image
+                      src="/doctor.jpg"
+                      alt="Dr. Amit N. Solanki"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 380px"
+                      className="object-cover object-[center_35%]"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(8,58,124,0.08)_100%)]" />
+                  </div>
 
-            <InViewFade className="mt-8 rounded-[28px] border border-[#d6e1ee] bg-[#f8fbff] p-5 shadow-[0_10px_28px_rgba(39,73,116,0.12)] sm:p-7 lg:mt-10 lg:p-10" distance={30}>
-              <div className="grid gap-7 lg:grid-cols-[360px_1fr] lg:gap-10 xl:grid-cols-[390px_1fr]">
-                <div className="relative min-h-[360px] overflow-hidden rounded-3xl border border-[#d5dfec] bg-[#d7e0ea] sm:min-h-[430px]">
-                  <Image
-                    src="/doctor.jpg"
-                    alt="Dr. Amit N. Solanki"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 35vw"
-                    className="object-cover object-[center_24%]"
-                  />
+                  <div className="absolute -bottom-5 right-4 flex h-28 w-28 items-center justify-center rounded-full bg-[#0f8a57] px-4 text-center text-[11px] font-semibold uppercase tracking-[0.08em] text-white shadow-[0_16px_30px_rgba(15,138,87,0.3)] sm:-bottom-6 sm:right-8 sm:h-32 sm:w-32 sm:text-[12px]">
+                    <span className="leading-[1.3]">Since 2003</span>
+                  </div>
                 </div>
 
-                <StaggerGroup className="" stagger={0.08} distance={18} amount={0.25}>
+                <StaggerGroup className="w-full" stagger={0.08} distance={18} amount={0.25}>
                   <StaggerItem>
-                    <h3 className="text-[38px] font-semibold leading-[1.06] tracking-[-0.022em] text-[#0f4698] sm:text-[48px]">
-                      Dr. Amit N. Solanki
-                    </h3>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <p className="mt-3 text-[13px] font-semibold uppercase tracking-[0.1em] text-[#7e90ad]">
-                      MBBS · DOMS · DNB · FAECS
-                    </p>
-                  </StaggerItem>
-                  <StaggerItem>
-                    <p className="mt-2 text-[23px] font-semibold leading-tight text-[#2ca56f] sm:text-[26px]">
-                      Super-specialist · Cataract, Glaucoma &amp; Refractive-LASIK Surgeon
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#1d5eb6]">
+                      {DOCTOR_PROFILE.eyebrow}
                     </p>
                   </StaggerItem>
 
                   <StaggerItem>
-                    <p className="mt-5 max-w-[780px] text-[17px] leading-[1.55] text-[#576f92] sm:text-[18px]">
-                      Director of Shanti EyeTech, with more than 20 years of ophthalmology
-                      experience. Trained at B.J. Medical College, Ahmedabad and Aravind Eye
-                      Hospital, Tamil Nadu - with advanced training in phacoemulsification,
-                      glaucoma diagnosis &amp; management, and LASIK refractive surgery.
+                    <h2 className="mt-3 text-[42px] font-semibold leading-[1.02] tracking-[-0.04em] text-[#16233a] sm:text-[52px] lg:text-[58px] xl:text-[62px]">
+                      {DOCTOR_PROFILE.name}
+                    </h2>
+                  </StaggerItem>
+
+                  <StaggerItem>
+                    <p className="mt-3 max-w-[900px] text-[18px] italic leading-[1.5] text-[#1d5eb6] sm:text-[20px]">
+                      {DOCTOR_PROFILE.subtitle}
                     </p>
                   </StaggerItem>
 
                   <StaggerItem>
-                    <StaggerGroup className="mt-4 flex flex-wrap gap-2.5" stagger={0.06} distance={8} amount={0.35}>
-                      {doctorSpecialties.map((item) => (
-                        <StaggerItem key={item}>
-                          <span className="rounded-full border border-[#bfe1ce] bg-[#ecfbf3] px-3 py-1.5 text-[14px] font-semibold text-[#2f9d69]">
-                            {item}
-                          </span>
+                    <div className="my-6 h-px bg-[#d9e3ef]" />
+                  </StaggerItem>
+
+                  <StaggerItem>
+                    <p className="max-w-[860px] text-[17px] leading-[1.72] text-[#5f6b7f] sm:text-[18px]">
+                      {DOCTOR_PROFILE.bio}
+                    </p>
+                  </StaggerItem>
+
+                  <StaggerItem>
+                    <StaggerGroup className="mt-8 grid gap-5 sm:grid-cols-2" stagger={0.08} distance={12} amount={0.35}>
+                      {DOCTOR_PROFILE.highlights.map((item) => (
+                        <StaggerItem key={item.label}>
+                          <article className="rounded-[22px] border border-[#d8e4f1] bg-white/70 p-5 shadow-[0_10px_24px_rgba(43,71,116,0.08)]">
+                            <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-[#1d5eb6]">
+                              {item.label}
+                            </p>
+                            <p className="mt-2 text-[16px] leading-[1.55] text-[#5f6b7f]">
+                              {item.value}
+                            </p>
+                          </article>
                         </StaggerItem>
                       ))}
                     </StaggerGroup>
                   </StaggerItem>
 
                   <StaggerItem>
-                    <div className="mt-6 border-t border-[#d8e2ef] pt-5">
-                      <StaggerGroup className="grid gap-4 sm:grid-cols-3" stagger={0.08} distance={12}>
-                        {doctorStats.map((item) => (
-                          <StaggerItem key={item.label}>
-                            <div>
-                              <CountUpNumber
-                                value={item.end}
-                                suffix={item.suffix}
-                                decimals={item.decimals}
-                                className="text-[44px] font-bold leading-none tracking-[-0.03em] text-[#1d74c9] sm:text-[48px]"
-                              />
-                              <p className="mt-1.5 text-[16px] leading-tight text-[#7a8fad] sm:text-[17px]">
-                                {item.label}
-                              </p>
-                            </div>
-                          </StaggerItem>
-                        ))}
-                      </StaggerGroup>
+                    <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-5">
+                      <a
+                        href="tel:+919179191939"
+                        className="inline-flex h-12 items-center gap-2 rounded-full bg-[#1d5eb6] px-6 text-[16px] font-semibold text-white shadow-[0_14px_28px_rgba(29,94,182,0.22)] transition hover:bg-[#164c94]"
+                      >
+                        <PhoneIcon />
+                        <span>Call us</span>
+                      </a>
 
-                      <div className="mt-6 flex flex-wrap items-center gap-4 sm:gap-6">
-                        <a
-                          href="tel:+919179191939"
-                          className="inline-flex h-11 items-center gap-2 rounded-full border border-[#d2ddee] bg-white px-6 text-[16px] font-semibold text-[#2a65b4] transition hover:bg-[#edf3fd]"
-                        >
-                          <PhoneIcon />
-                          <span>Call us</span>
-                        </a>
-
-                        <Link
-                          href="#"
-                          className="motion-link-underline inline-flex items-center gap-2 text-[22px] font-semibold text-[#1e58ab] transition hover:text-[#164890]"
-                        >
-                          <span>Book a consultation</span>
-                          <ArrowRightIcon />
-                        </Link>
-                      </div>
+                      <Link
+                        href="#"
+                        className="motion-link-underline inline-flex items-center gap-2 text-[18px] font-semibold text-[#1d5eb6] transition hover:text-[#164c94]"
+                      >
+                        <span>Book a consultation</span>
+                        <ArrowRightIcon />
+                      </Link>
                     </div>
                   </StaggerItem>
                 </StaggerGroup>
@@ -661,7 +517,9 @@ export default function Home() {
 
         <WhyChooseAwardsSection />
 
-        <TestimonialsFooterSection />
+        <section id="testimonials">
+          <TestimonialsFooterSection />
+        </section>
       </main>
     </div>
   );

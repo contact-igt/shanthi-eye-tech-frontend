@@ -9,7 +9,7 @@ export function InViewFade({
   children,
   className,
   delay = 0,
-  duration = 0.82,
+  duration = 1.05,
   distance = 30,
   scale = 0.985,
   amount = 0.25,
@@ -69,7 +69,7 @@ export function StaggerGroup({
   );
 }
 
-export function StaggerItem({ children, className, distance = 24, duration = 0.72 }) {
+export function StaggerItem({ children, className, distance = 24, duration = 0.95 }) {
   const shouldReduceMotion = useReducedMotion();
 
   if (shouldReduceMotion) {
@@ -88,6 +88,40 @@ export function StaggerItem({ children, className, distance = 24, duration = 0.7
         show: {
           opacity: 1,
           y: 0,
+          scale: 1,
+          transition: {
+            duration,
+            ease: defaultEase,
+          },
+        },
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export function StaggerSlideItem({ children, className, distance = 32, duration = 0.95, direction = "left" }) {
+  const shouldReduceMotion = useReducedMotion();
+
+  if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
+
+  const x = direction === "left" ? -distance : distance;
+
+  return (
+    <motion.div
+      className={className}
+      variants={{
+        hidden: {
+          opacity: 0,
+          x,
+          scale: 0.985,
+        },
+        show: {
+          opacity: 1,
+          x: 0,
           scale: 1,
           transition: {
             duration,

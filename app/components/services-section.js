@@ -1,53 +1,9 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { StaggerGroup, StaggerItem } from "./animations/motion-system";
-
-const services = [
-  {
-    title: "Cataract Services",
-    description: "Clearer vision with advanced cataract evaluation and surgical care.",
-    icon: "cataract",
-    featured: true,
-  },
-  {
-    title: "Glaucoma Services",
-    description: "Early diagnosis and long-term management to protect your vision.",
-    icon: "glaucoma",
-  },
-  {
-    title: "Freedom From Glasses",
-    description: "Advanced LASIK and vision correction for suitable candidates.",
-    icon: "glasses",
-  },
-  {
-    title: "Keratoconus Care",
-    description: "Specialised diagnosis for corneal thinning and distorted vision.",
-    icon: "cornea",
-  },
-  {
-    title: "Retina Services",
-    description: "Diagnosis and care for retinal conditions affecting vision.",
-    icon: "retina",
-  },
-  {
-    title: "Pediatric Eye Care",
-    description: "Gentle, careful eye care for children's vision development.",
-    icon: "pediatric",
-  },
-  {
-    title: "Opticals",
-    description: "Quality eyewear, lens fitting and frame selection support.",
-    icon: "opticals",
-  },
-  {
-    title: "Pharmacy",
-    description: "In-house pharmacy for continuity of eye-care prescriptions.",
-    icon: "pharmacy",
-  },
-];
+import { SERVICES } from "../constants/services";
 
 function ServiceIcon({ icon, featured }) {
   const iconColor = featured ? "text-[#7ce8bd]" : "text-[#2ca56f]";
@@ -159,66 +115,94 @@ function ServiceCard({ title, description, icon, featured = false }) {
     };
   }, []);
 
+  const mxVal = parseFloat(mouse.x || "50%");
+  const myVal = parseFloat(mouse.y || "50%");
+  const rotateX = shouldReduceMotion ? 0 : (myVal - 50) / 6;
+  const rotateY = shouldReduceMotion ? 0 : (mxVal - 50) / -6;
+  const featuredTitle = featured ? "text-white" : "glass-title";
+  const featuredDescription = featured ? "text-[#d9e7ff]" : "text-[#7186a5]";
+
   return (
     <motion.article
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ "--mx": mouse.x, "--my": mouse.y }}
-      whileHover={shouldReduceMotion ? undefined : { y: -8, scale: 1.01 }}
+      animate={shouldReduceMotion ? undefined : { rotateX, rotateY }}
+      whileHover={shouldReduceMotion ? undefined : { y: -10, scale: 1.015 }}
       whileTap={shouldReduceMotion ? undefined : { scale: 0.995 }}
-      transition={{ duration: 0.34, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ type: "spring", stiffness: 80, damping: 18, mass: 1 }}
       className={[
-        "motion-card-soft group relative overflow-hidden rounded-[18px] border p-6",
+        "motion-card-soft perspective group relative isolate h-full overflow-hidden rounded-[26px] border p-7 sm:p-8 lg:p-9",
         featured
-          ? "border-[#0f4a98] bg-[#0f4a98] text-white"
-          : "border-[#d7e1ee] bg-white text-[#19468f] hover:border-[#9fc1ea]",
+          ? "border-[#0d4f9b] bg-[linear-gradient(180deg,#155ab2_0%,#0d458f_100%)] text-white shadow-[0_24px_50px_rgba(14,73,147,0.24)]"
+          : "border-[#c5d8ec] glass-card text-[#1a4a8f] shadow-[0_16px_36px_rgba(53,86,123,0.06)] hover:border-[#afc5e0]",
       ].join(" ")}
     >
       <div
-        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        className={[
+          "pointer-events-none absolute inset-0 transition-opacity duration-500 group-hover:opacity-100",
+          featured ? "opacity-70" : "glass-highlight opacity-0 group-hover:opacity-100",
+        ].join(" ")}
         style={{
           background: featured
-            ? "radial-gradient(220px circle at var(--mx) var(--my), rgba(110,178,255,0.25), rgba(17,77,154,0) 65%)"
-            : "radial-gradient(220px circle at var(--mx) var(--my), rgba(29,116,201,0.22), rgba(29,116,201,0) 65%)",
+            ? "radial-gradient(280px circle at var(--mx) var(--my), rgba(129,212,255,0.22), rgba(17,77,154,0) 60%)"
+            : "radial-gradient(280px circle at var(--mx) var(--my), rgba(29,116,201,0.18), rgba(29,116,201,0) 62%)",
         }}
         aria-hidden="true"
       />
 
-      <div className="relative z-10">
+      <div
+        className={[
+          "pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full blur-3xl transition-transform duration-700 group-hover:scale-110",
+          featured ? "bg-white/20" : "bg-[#d4e7f8]/65",
+        ].join(" ")}
+        aria-hidden="true"
+      />
+
+      <div
+        className={[
+          "pointer-events-none absolute -bottom-20 -left-16 h-48 w-48 rounded-full blur-3xl transition-transform duration-700 group-hover:scale-110",
+          featured ? "bg-[#63f0bd]/14" : "bg-[#c8f4e4]/50",
+        ].join(" ")}
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 flex h-full flex-col items-center text-center">
         <motion.div
-          whileHover={shouldReduceMotion ? undefined : { rotate: [0, -4, 2, 0], scale: 1.08 }}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          whileHover={shouldReduceMotion ? undefined : { rotate: [0, -8, 4, 0], scale: 1.1 }}
+          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
           className={[
-            "flex h-10 w-10 items-center justify-center rounded-xl",
-            featured ? "bg-[#1a62b5]" : "bg-[#e7f4ee]",
+            "flex h-14 w-14 items-center justify-center rounded-[20px] ring-1 backdrop-blur-md transition-colors duration-400",
+            featured
+              ? "bg-white/14 ring-white/12"
+              : "bg-[#e0f2ff]/80 ring-[#c5dcf0]",
           ].join(" ")}
         >
           <ServiceIcon icon={icon} featured={featured} />
         </motion.div>
 
-        <h3 className={["mt-4 text-[33px] font-semibold leading-tight", featured ? "text-white" : "text-[#164995]"].join(" ")}>
+        <h3 className={["mt-6 text-[24px] font-bold leading-[1.2] text-center sm:text-[26px]", featuredTitle].join(" ")}>
           {title}
         </h3>
 
         <p
           className={[
-            "mt-3 text-[19px] leading-[1.45]",
-            featured ? "text-[#c8daf2]" : "text-[#7186a5]",
+            "mt-4 max-w-[260px] text-[15px] leading-[1.6] text-center",
+            featuredDescription,
           ].join(" ")}
         >
           {description}
         </p>
 
-        <Link
-          href="#"
-          className={[
-            "motion-link-underline mt-5 inline-flex items-center gap-2 text-[14px] font-semibold uppercase tracking-[0.08em]",
-            featured ? "text-[#63efba]" : "text-[#35b271]",
-          ].join(" ")}
-        >
-          <span>Read More</span>
-          <span aria-hidden="true">→</span>
-        </Link>
+        <div className="mt-auto w-full pt-6">
+          <div
+            className={[
+              "mx-auto h-1 w-14 rounded-full transition-all duration-500 group-hover:w-20",
+              featured ? "bg-white/25" : "bg-[#b8d0e8] group-hover:bg-[#2575cf]/40",
+            ].join(" ")}
+            aria-hidden="true"
+          />
+        </div>
       </div>
     </motion.article>
   );
@@ -226,32 +210,38 @@ function ServiceCard({ title, description, icon, featured = false }) {
 
 export default function ServicesSection() {
   return (
-    <section className="bg-[#eef3f8] px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8 lg:pb-28">
+    <section className="border-t border-[#d0e0f0] bg-[#f0f7ff] px-4 pt-16 pb-20 sm:px-6 sm:pt-20 sm:pb-24 lg:px-8 lg:pt-24 lg:pb-28">
       <div className="mx-auto w-full max-w-[1280px]">
-        <StaggerGroup className="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end" stagger={0.12} distance={24}>
-          <StaggerItem>
-            <div>
-              <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#2ca56f]">
+        <div className="mx-auto max-w-[940px] text-center">
+          <StaggerGroup className="space-y-5" stagger={0.1} distance={22} amount={0.25}>
+            <StaggerItem>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.26em] text-[#2ca56f]">
                 Our Services
               </p>
-              <h2 className="mt-4 max-w-[720px] text-[48px] font-semibold leading-[1.03] tracking-[-0.03em] text-[#0f4698] sm:text-[58px] lg:text-[64px]">
+            </StaggerItem>
+
+            <StaggerItem>
+              <h2 className="mx-auto max-w-[800px] text-[46px] font-bold leading-[1.05] tracking-[-0.02em] text-[#0c4a9e] sm:text-[54px] lg:text-[62px]">
                 Comprehensive eye care
                 <br />
-                under one roof.
+                under one roof
               </h2>
-            </div>
-          </StaggerItem>
+            </StaggerItem>
 
-          <StaggerItem>
-            <p className="max-w-[610px] text-[18px] leading-[1.5] text-[#7e91ae] sm:text-[19px] lg:justify-self-end">
-              From routine concerns to advanced surgical care, Shanti EyeTech offers
-              specialised treatment across the major areas of ophthalmology.
-            </p>
-          </StaggerItem>
-        </StaggerGroup>
+            <StaggerItem>
+              <p className="mx-auto max-w-[900px] text-[17px] leading-[1.62] text-[#5f7895] sm:text-[18px] lg:text-[19px]">
+                From routine concerns to advanced surgical care, Shanti EyeTech offers specialised treatment across the major areas of ophthalmology.
+              </p>
+            </StaggerItem>
 
-        <StaggerGroup className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4" stagger={0.08} distance={18} amount={0.2}>
-          {services.map((service) => (
+            <StaggerItem>
+              <div className="mx-auto mt-3 h-1 w-20 rounded-full bg-gradient-to-r from-transparent via-[#2ca56f]/50 to-transparent" />
+            </StaggerItem>
+          </StaggerGroup>
+        </div>
+
+        <StaggerGroup className="mt-14 grid gap-6 sm:grid-cols-2 xl:grid-cols-4 items-stretch" stagger={0.08} distance={18} amount={0.2}>
+          {SERVICES.map((service) => (
             <StaggerItem key={service.title}>
               <ServiceCard
                 title={service.title}
