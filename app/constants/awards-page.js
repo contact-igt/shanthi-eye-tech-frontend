@@ -29,7 +29,7 @@ export const AWARDS_TIMELINE = [
     title: "AIOS Best Paper",
     description:
       "Awarded by the All India Ophthalmological Society for groundbreaking research in corneal diagnostics and laser therapeutics.",
-    image: "/hspital_photo.jpeg",
+    image: "/hospital_photo.jpeg",
     imageLabel: "Research Excellence",
     imageSide: "right",
   },
